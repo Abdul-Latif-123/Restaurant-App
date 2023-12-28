@@ -18,6 +18,6 @@ restServer.use(middleware)
 restServer.use(router)
 
 // to run a port
-restServer.listen(port,()=>{
-    console.log('Rest server listening on port' +port);
+restServer.listen(port, () => {
+    console.log('Rest server listening on port' + port);
 })
