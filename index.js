@@ -1,23 +1,23 @@
-// import json-server
-const jsonserver = require('jason-server')
+//1 import json-server
+const jsonServer = require('json-server');
 
-// create a server application using jsonServer
-const restServer = jsonserver.create()
+//2 create a server application using json-server
+const restServer = jsonServer.create()
 
-// setup path for db.json
-const router = jsonserver.router('db.jason')
+//setup path for db.json 
+const router = jsonServer.router('db.json')
 
-// return a middleware used by json server
-const middleware = jsonserver.defaults()
+//return a middilware instance used by json-server
+const middilware =jsonServer.defaults()
 
-// setup port
+//setup port for db.json
 const port = 3001
 
-// use in server
-restServer.use(middleware)
+//use in server
+restServer.use(middilware)
 restServer.use(router)
 
-// to run a port
-restServer.listen(port, () => {
-    console.log('Rest server listening on port' + port);
+//to run the server(restserver)
+restServer.listen(port,()=>{
+    console.log("rest server listening on port" +port);
 })
